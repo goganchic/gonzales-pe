@@ -1286,9 +1286,8 @@ module.exports = (function() {
         if (l = checkPropertyDelim(i)) i++;
         else return 0;
 
-        if (l = checkValue(i)) return i + l - start;
-
         if (l = checkS(i)) i += l;
+        else return 0;
 
         if (l = checkValue(i)) i += l;
         else return 0;
@@ -3906,5 +3905,5 @@ module.exports = (function() {
         pos = 0;
 
         return rules[rule]();
-   };
+    };
 })();
